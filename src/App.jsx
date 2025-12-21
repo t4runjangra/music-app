@@ -11,7 +11,7 @@ import SignUp from "./pages/signup";
 import Home from "./pages/Home.jsx";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { ToastProvider } from "./context/toastContext";
-
+import { Profile } from "./pages/profile";
 function App() {
   return (
     <ToastProvider>
@@ -33,6 +33,7 @@ function App() {
                     </ProtectedRoute>
                   }
                 />
+                <Route path="/profile" element={<Profile />} />
                 <Route path="*" element={<Navigate to="/login" />} />
               </Routes>
             </div>
